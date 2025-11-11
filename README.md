@@ -27,6 +27,28 @@ npm run dev
 npm run build
 ```
 
+## GitHub Pages 배포 방법
+
+### 방법 1: GitHub Actions 자동 배포 (추천)
+
+1. GitHub 저장소 생성 후 코드 푸시
+2. GitHub 저장소 Settings → Pages로 이동
+3. Source를 "GitHub Actions"로 설정
+4. main 브랜치에 푸시하면 자동으로 배포됨
+5. 배포 완료 후 `https://yourusername.github.io/gcode-3d-viewer/` 에서 확인
+
+### 방법 2: 수동 배포
+
+```bash
+# gh-pages 브랜치로 배포
+npm run deploy
+```
+
+**중요**: `vite.config.js`에서 저장소 이름 확인!
+```javascript
+base: '/gcode-3d-viewer/'  // 저장소 이름과 일치해야 함
+```
+
 ## 사용 방법
 
 1. 브라우저에서 개발 서버 열기 (기본: http://localhost:5173)
@@ -55,4 +77,4 @@ npm run build
 
 ## 라이선스
 
-Apache2.0
+MIT
